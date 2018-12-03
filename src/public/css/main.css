@@ -4,3 +4,8 @@ body{
 #usuarios{
 	text-align: center;
 }
+
+#chat{
+	height:400px;
+	overflow-y: auto;
+}

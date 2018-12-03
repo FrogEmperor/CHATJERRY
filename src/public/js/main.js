@@ -6,6 +6,8 @@ const submitmensaje = document.getElementById('mensaje-submit');
 const mensaje = document.getElementById('mensaje'); 
 const chat = document.getElementById('chat');
 
+
+
 // obteniendo div de usuarios
 const usuarioMostrar = document.getElementById('usuarios');
 
@@ -18,9 +20,15 @@ function imprimirMensaje(e) {
 }
 submitmensaje.addEventListener("click", imprimirMensaje);
 
+socket.on('coneccion', data => {
+	chat.innerHTML += "<b> <font color='red'>" + data.usuario + " SE HA " + data.status + " </font></br>";
+	chat.scrollTop = chat.scrollHeight;
+});
+
 // imprimir mensaje nuevo en el chat
 socket.on('mensaje nuevo', data => {
 	chat.innerHTML += "<b><tagname style='color:" +  data.clr + "'>" + data.usuario + "</tagname>:</b> " + data.msg + "</br>";
+	chat.scrollTop = chat.scrollHeight;
 });
 
 // Mostrar todos los usuarios
