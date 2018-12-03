@@ -1,0 +1,19 @@
+{
+  "name": "chatchido",
+  "version": "1.0.0",
+  "description": "Chat de Jerry",
+  "main": "src/App.js",
+  "scripts": {
+    "dev":"nodemon src/App.js"
+  },
+  "keywords": [
+    "chat",
+    "jerry"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1"
+  }
+}

@@ -1,0 +1,22 @@
+# Temp files
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Dev files
+npm-debug.log
+npm-debug.log.*
+thumbs.db
+!.gitkeep
+
+# Build files
+build/*
+!build/icons
+
+# Dist files
+dist/*
+!dist/web
+!dist/windows
+!dist/mac
+!dist/linux

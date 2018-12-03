@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chat</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+  </head>
+  <body>
+
+    <div class="container">
+    	<div class="row mt-2">
+	    	<div class="col-md-6">
+	    		<div class="card">
+	    			<div class="card-header">
+	    				<g4> AAAA CHATEAR </g4>
+	    			</div>
+	    			<div id="chat" class="card-body"></div>
+	    			<form id="mensaje-form" class="card-footer">
+	    				<div class="input-group">
+	    					<input type="text" id="mensaje" class="form-control" />
+	    					<div class="input-group-append">
+	    						<input type="submit" id = "mensaje-submit"class="btn 	btn-warning">
+	    					</div>
+	    				</div>
+	    			</form>
+	    		</div>
+	    	</div>
+	    	<div class="card md-3">
+	    		<div class="card-header">
+	    			<h3> Usuarios </h3>
+	    		</div>
+	    		<div>
+	    			<div id="usuarios"></div>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
+  </body>
+</html>
