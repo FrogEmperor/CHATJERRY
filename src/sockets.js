@@ -18,7 +18,8 @@ io.on('connection', socket =>{
 	// nuevo usuario en los mensajes
 	io.sockets.emit('coneccion', {
 			usuario: socket.usuario,
-			status: "CONECTADO"
+			status: "CONECTADO",
+			fondo: "p-1 bg-success text-white"
 		});
 
 	// poner usuario en cuadro de usuarios
@@ -41,7 +42,8 @@ io.on('connection', socket =>{
     	// mensaje de desconectado en chat
     	io.sockets.emit('coneccion', {
 			usuario: socket.usuario,
-			status: "DESCONECTADO"
+			status: "DESCONECTADO",
+			fondo: "p-1 bg-danger text-white"
 		});
 
     	// eliminar informacion ddel usuario

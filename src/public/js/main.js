@@ -21,7 +21,7 @@ function imprimirMensaje(e) {
 submitmensaje.addEventListener("click", imprimirMensaje);
 
 socket.on('coneccion', data => {
-	chat.innerHTML += "<b> <tagname class='p-1 bg-danger text-white'>" + data.usuario + " SE HA " + data.status + " </br></tagname>";
+	chat.innerHTML += "<b> <tagname class='" + data.fondo +"'>" + data.usuario + " SE HA " + data.status + " </br></tagname>";
 	chat.scrollTop = chat.scrollHeight;
 });
 
