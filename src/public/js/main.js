@@ -21,13 +21,13 @@ function imprimirMensaje(e) {
 submitmensaje.addEventListener("click", imprimirMensaje);
 
 socket.on('coneccion', data => {
-	chat.innerHTML += "<b> <font color='red'>" + data.usuario + " SE HA " + data.status + " </font></br>";
+	chat.innerHTML += "<b> <tagname class='p-1 bg-danger text-white'>" + data.usuario + " SE HA " + data.status + " </br></tagname>";
 	chat.scrollTop = chat.scrollHeight;
 });
 
 // imprimir mensaje nuevo en el chat
 socket.on('mensaje nuevo', data => {
-	chat.innerHTML += "<b><tagname style='color:" +  data.clr + "'>" + data.usuario + "</tagname>:</b> " + data.msg + "</br>";
+	chat.innerHTML += "<b><font class='msg' style='color:" +  data.clr + "'>" + data.usuario + "</font>:</b> " + data.msg + "</br>";
 	chat.scrollTop = chat.scrollHeight;
 });
 
@@ -35,6 +35,6 @@ socket.on('mensaje nuevo', data => {
 socket.on('usuario', data => {
 	usuarioMostrar.innerHTML = "";
 	for(i=0;i<data.usuarios.length;i++){
-	usuarioMostrar.innerHTML += '<tagname style="color:' + data.colores[i] + '">' + data.usuarios[i] + '</tagname></br>';
+	usuarioMostrar.innerHTML += '<font style="color:' + data.colores[i] + '">' + data.usuarios[i] + '</font></br>';
 	}
 });

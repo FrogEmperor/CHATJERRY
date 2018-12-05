@@ -4,7 +4,10 @@ body{
 #usuarios{
 	text-align: center;
 }
-
+tagname { display: block;}
+.msg{
+	padding: 1px;
+}
 #chat{
 	height:400px;
 	overflow-y: auto;
